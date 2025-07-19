@@ -82,4 +82,4 @@
 
 **歡迎使用 Twitch Frequently Used Emotes Manager！**  
 
-如果您有任何問題、建議或發現 Bug，歡迎提出 Issue 或 Pull Request 或透過 [Discord (darrylych)](https://discord.com/users/536082876836610058) 聯絡我。
+如果您有任何問題、建議或發現 Bug，歡迎提出 Issue 或 Pull Request 或透過 [Discord (darrylych)](https://discord.com/users/536082876836610058) [Discord Server](https://discord.gg/CawUubnPdD)聯絡我。
