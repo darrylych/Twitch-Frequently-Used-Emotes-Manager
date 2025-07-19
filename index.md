@@ -24,13 +24,7 @@
 
 ## 安裝步驟
 
-由於此擴充功能目前尚未發布到 Chrome 線上應用商店，您需要以**開發者模式**手動安裝：
-
-1.  **下載程式碼：**  從 GitHub 專案頁面下載程式碼壓縮檔 (ZIP 檔案)，或使用 Git 指令 Clone 專案到您的電腦。
-2.  **開啟 Chrome 擴充功能管理頁面：**  在 Chrome/Edge 瀏覽器網址列輸入 `chrome://extensions/` 並按下 Enter 鍵。
-3.  **開啟「開發人員模式」：**  在擴充功能管理頁面右上角，將「**開發人員模式**」開關打開 (Edge在左邊)。
-4.  **載入未封裝擴充功能：**  點擊左上角的「**載入未封裝項目**」按鈕 (Edge為載入解壓縮)。
-5.  **選擇專案資料夾：**  在檔案瀏覽器中，選擇您下載或 Clone 的擴充功能專案資料夾，點擊「**選擇資料夾**」或「**確定**」。
+[點選連結](https://chromewebstore.google.com/detail/twitch-frequently-used-em/amjnkamcoflpnldhdnnhegepggeienhl)後點選取得 -> 新增擴充功能：
 
 完成以上步驟後，**Twitch Frequently Used Emotes Manager** 擴充功能就會安裝到您的 Chrome 瀏覽器中了。
 
