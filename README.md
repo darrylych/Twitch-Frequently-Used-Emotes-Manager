@@ -76,7 +76,6 @@
 如果您覺得 **Twitch-Frequently-Used-Emotes-Manager** 這個擴充功能對您有幫助，並且願意支持我的開發工作，非常歡迎您透過以下連結贊助我：
 
 *   **歐付寶 (oPay)：** [贊助連結 (歐付寶)](https://payment.opay.tw/Broadcaster/Donate/24F8296772A9D24F2F70E3BB22F5C3E8) - 透過歐付寶平台贊助。
-*   **綠界科技 (ECPay)：** [贊助連結 (綠界科技)](https://p.ecpay.com.tw/E1B34) - 透過綠界科技平台贊助。
 
 您的贊助將是對我最大的鼓勵和支持，讓我更有動力持續開發和維護這個專案，提供更好的使用者體驗。非常感謝您的支持！
 
