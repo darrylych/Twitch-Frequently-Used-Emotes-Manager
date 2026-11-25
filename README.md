@@ -3,83 +3,118 @@
 **Chrome 擴充功能：Twitch 表情符號歷史紀錄編輯器**
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/amjnkamcoflpnldhdnnhegepggeienhl?logo=chrome&logoColor=white&style=for-the-badge)](https://chromewebstore.google.com/detail/twitch-frequently-used-em/amjnkamcoflpnldhdnnhegepggeienhl)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[English](README.en.md) · [隱私權政策](PRIVACY_POLICY.md)
 
 ## 簡介
 
-**Twitch Frequently Used Emotes Manager** 是一個 Chrome 瀏覽器擴充功能，旨在幫助使用者更方便地查看和管理在 Twitch 直播平台上使用的表情符號歷史紀錄。
+掌控 Twitch 表情選單裡的「常用表情」。把喜歡的表情釘選到最上方並自訂順序、修正或重設使用次數、看看這週真正常用哪些表情、清掉久沒用的，還能隨時備份。全部在一個精簡的彈出視窗裡完成，支援繁體中文與英文。
 
-這個擴充功能會讀取 Twitch 網站儲存在瀏覽器 LocalStorage 中的表情符號使用紀錄，並以表格形式在擴充功能彈出視窗中呈現。  使用者可以輕鬆瀏覽所有使用過的表情符號、其名稱和使用次數，並且可以直接在擴充功能中編輯表情符號的 **使用次數** 值。
+本擴充功能直接讀寫 Twitch 存在你瀏覽器裡的表情歷史紀錄（`localStorage` 的 `twilight.emote_picker_history`），資料不會離開你的瀏覽器。
 
-## 功能特色
+<p align="center">
+  <img src="images/popup-emotes.png" width="300" alt="表情分頁：釘選、本週趨勢與使用次數">
+  <img src="images/popup-insights.png" width="300" alt="分析分頁：本週熱門與累計排行">
+  <img src="images/popup-backup.png" width="300" alt="備份分頁：儲存槽與自動備份">
+</p>
 
-*   **查看表情符號歷史紀錄：**  以清晰的表格形式顯示所有 Twitch 表情符號的歷史紀錄，包括表情符號圖片、名稱和使用次數。
-*   **編輯表情符號使用次數：**  直接在表格中編輯每個表情符號的"使用次數"值，並即時儲存。
-*   **清除歷史紀錄：**  提供按鈕快速清除所有表情符號的使用歷史紀錄。
-*   **重新載入資料：**  提供按鈕重新從 Twitch LocalStorage 載入最新的表情符號歷史紀錄。
-*   **顯示/隱藏預設表情符號：**  可以切換顯示或隱藏 Twitch 預設的常見表情符號，方便使用者專注於自訂或特定頻道的表情符號。
-*   **依使用次數排序：**  表情符號列表會自動依照 "使用次數" 次數從多到少排序，讓使用者快速找到最常用的表情符號。
-*   **簡潔的使用者介面：**  彈出視窗介面設計簡潔直觀，操作容易。
-*   **本地端資料儲存：**  所有歷史紀錄資料都儲存在您的瀏覽器 LocalStorage 中，保障個人隱私。
+## 2.1.0 新功能
 
-## 安裝步驟
+- **全新介面**：深色優先的精簡版面，完整放進 Chrome 彈窗；也有淺色與跟隨系統主題。
+- **自訂釘選順序**：釘選的表情可上下移動，Twitch 表情選單也會照這個順序顯示。
+- **使用趨勢**：每個表情都會顯示「本週 +N」，分析頁新增「本週熱門」與「久未使用」。
+- **自動備份與復原**：每次刪除、匯入、載入或清除前都會自動備份（保留 10 份），可任選一份還原；刪除後的提示上也能直接按「復原」。
+- **更安全的批次操作**：全選與批次刪除只會作用在目前看得到的表情。
+- **儲存槽會一併保存釘選**、可以直接在列表上修改次數，並新增快速鍵。
 
-由於此擴充功能目前尚未發布到 Chrome 線上應用商店，您需要以**開發者模式**手動安裝：
+## 安裝
 
-1.  **下載程式碼：**  從 GitHub 專案頁面下載程式碼壓縮檔 (ZIP 檔案)，或使用 Git 指令 Clone 專案到您的電腦。
-2.  **開啟 Chrome 擴充功能管理頁面：**  在 Chrome/Edge 瀏覽器網址列輸入 `chrome://extensions/` 並按下 Enter 鍵。
-3.  **開啟「開發人員模式」：**  在擴充功能管理頁面右上角，將「**開發人員模式**」開關打開 (Edge在左邊)。
-4.  **載入未封裝擴充功能：**  點擊左上角的「**載入未封裝項目**」按鈕 (Edge為載入解壓縮)。
-5.  **選擇專案資料夾：**  在檔案瀏覽器中，選擇您下載或 Clone 的擴充功能專案資料夾，點擊「**選擇資料夾**」或「**確定**」。
+從 [Chrome 線上應用程式商店](https://chromewebstore.google.com/detail/twitch-frequently-used-em/amjnkamcoflpnldhdnnhegepggeienhl) 安裝。Microsoft Edge 也可以從 Chrome 線上應用程式商店安裝。
 
-完成以上步驟後，**Twitch Frequently Used Emotes Manager** 擴充功能就會安裝到您的 Chrome 瀏覽器中了。
+## 使用方式
 
-## 使用方法
+請**在 twitch.tv 分頁開著並且是目前分頁時**點擊擴充功能圖示。如果目前在其他網站，彈窗會顯示「開啟 Twitch」按鈕。
 
-1.  **開啟 Twitch 網站：**  在 Chrome 瀏覽器中開啟 [Twitch 網站](https://www.twitch.tv)。
+### 表情分頁
 
-2.  **點擊擴充功能圖示：**  在 Chrome 瀏覽器工具列 (網址列右側) 找到 **Twitch-Frequently-Used-Emotes-Manager** 的擴充功能圖示 (如下圖所示)。
+| 動作 | 做法 |
+| --- | --- |
+| 搜尋 | 在搜尋框輸入，或在任何地方按 <kbd>/</kbd> |
+| 排序 | 最常用、最少用、名稱 A–Z / Z–A，或「本週熱門」 |
+| 篩選 | 「全部」/「已釘選」；「預設表情」可切換是否顯示 Kappa、LUL、PogChamp 等（已釘選的一定會顯示） |
+| 修改次數 | 點數字、輸入後按 <kbd>Enter</kbd>（按 <kbd>Esc</kbd> 取消） |
+| 釘選／取消釘選 | 點 ☆ 星號，釘選的表情會固定在 Twitch 選單最上方 |
+| 調整釘選順序 | 滑鼠移到釘選列上，使用 ▲ / ▼ 箭頭 |
+| 刪除單一表情 | 滑鼠移到該列上點垃圾桶；刪錯了可按提示上的「復原」 |
+| 選取 | 勾選方塊、點擊該列，或用上方的勾選框全選目前看得到的表情 |
+| 批次操作 | 有選取時，底部的操作列可一次設定次數或刪除 |
+| 清理 | 「清理低使用表情」可選取或刪除次數低於門檻的未釘選表情 |
 
-    ![擴充功能圖示在 Chrome 工具列上的位置](images/extension-icon.png)
-    *擴充功能圖示位於 Chrome 工具列*
+每一列會顯示小標籤：`釘選 #n`、有新增次數時的綠色 `本週 +N`，以及 Twitch 內建表情的 `預設`。
 
-3.  **開啟彈出視窗：**  點擊擴充功能圖示，即可開啟擴充功能的彈出視窗 (如下圖所示)，第一次點開需重新整理 Twitch 頁面。
+### 分析分頁
 
-    ![擴充功能彈出視窗畫面](images/popup-window.png)
+- 統計：表情數、總次數、近期新增次數、已釘選數量。
+- **本週熱門**：次數增加最多的表情。
+- **累計前 10 名**。
+- **久未使用**：30 天內次數沒有變化的表情（資料未滿 30 天前會先顯示「最少使用」）。
+- **次數分佈**：0–10、11–50、51–100、101–500、500 次以上。
 
-4.  **查看和編輯歷史紀錄：**  在彈出視窗中，您可以看到表情符號歷史紀錄表格。
+> **趨勢怎麼算：** Twitch 只記錄累計次數，沒有日期。每次開啟彈窗時，擴充功能會記下當天的次數（每天一份、保留 60 天，只存在你的瀏覽器裡）。「本週」是拿今天和大約 7 天前的紀錄相比，所以更新到 2.1.0 後的隔天才會開始有趨勢。手動修改次數也會被算成變化。可以在設定頁清除這些紀錄。
 
-5.  **使用按鈕功能：**
-    *   **清除值：**  點擊「**清除值**」按鈕，可以清除所有表情符號的歷史紀錄 (如下圖所示) 點完之後請重新整理 Twitch 頁面。
+### 備份分頁
 
-        ![點擊「清除值」按鈕後的畫面](images/clear-button-click.png)
+- **匯出**：JSON 檔、CSV 檔（含圖片網址，可用 Excel 開啟），或複製 JSON 到剪貼簿。
+- **匯入**：從 JSON 檔或剪貼簿。可選「覆蓋」（以匯入的清單取代）或「合併」（加入新表情，已有的保留較高次數）。寫入前會先顯示預覽，列出會新增、移除和變更的項目。
+- **儲存槽**：三個可命名的槽位（點名稱即可重新命名），儲存時會連同釘選一起保存。
+- **自動備份**：列出最近 10 份備份與觸發原因，點一下即可還原；「復原上一步」會還原最新一份。
+- **危險區域**：清除整份歷史紀錄（會先備份，可以復原）。
 
-    *   **重新載入：**  點擊「**重新載入**」按鈕，可以重新從 Twitch LocalStorage 讀取最新的資料。
-    *   **顯示/隱藏 預設表情符號：**  點擊「**顯示預設表情符號**」或「**隱藏預設表情符號**」按鈕，可以切換預設表情符號的顯示狀態。
+### 設定頁
 
-6.  **編輯 "使用次數" 欄位：**  您可以直接在表格中編輯每個表情符號的 "使用次數" 值 (如下圖所示)。  修改後請點擊「**儲存**」按鈕儲存變更。
+點彈窗右上角的齒輪圖示。變更會自動儲存。
 
-    ![編輯 "使用次數" 欄位的畫面](images/edit-uses-value.png)
+- 主題：自動／深色／淺色。
+- 預設隱藏 Twitch 預設表情。
+- 預設匯入模式：覆蓋或合併。
+- 重設趨勢紀錄。
+
+### 快速鍵
+
+| 按鍵 | 功能 |
+| --- | --- |
+| <kbd>/</kbd> | 跳到搜尋框 |
+| <kbd>Esc</kbd> | 清除搜尋或選取、關閉對話框 |
+| <kbd>Enter</kbd> | 儲存修改的次數 |
+| <kbd>1</kbd>–<kbd>4</kbd> | 切換分頁 |
+
+## 釘選的原理
+
+Twitch 依使用次數排序「常用表情」。釘選的表情會以一個很大的次數寫入 Twitch，所以會依你設定的順序永遠排在最前面；真實次數另外保存，彈窗裡看到和修改的都是真實次數。
+
+如果 Twitch 的歷史紀錄被外部取代（其他裝置、Twitch 重設、舊版匯入），下次開啟彈窗時會自動處理：表情已不存在的釘選會被移除，失去置頂效果的釘選會自動補回。
+
+## 疑難排解
+
+- **「請先切換到 Twitch 分頁」**：切到 twitch.tv 分頁後再開啟彈窗。
+- **「無法連線到 Twitch 分頁」**：重新整理 Twitch 分頁後再試一次。
+- **Twitch 表情選單沒有變化**：重新整理 Twitch 頁面；在那之前 Twitch 可能仍使用舊資料。
+- **匯入被拒絕**：JSON 必須是物件，鍵為表情 ID，值需包含 `emote.id`、`emote.token` 與 `uses`。無效的項目會被略過，並顯示在預覽中。
+- **操作後發現資料不對**：到「備份」分頁 →「自動備份」→「還原」。
 
 ## 注意事項
 
-*   **資料來源：**  本擴充功能讀取的資料來源為 Twitch 網站儲存在您瀏覽器 LocalStorage 中的 `twilight.emote_picker_history` 紀錄。
-*   **重新整理網頁：**  在清除歷史紀錄後，可能需要重新整理 Twitch 網頁才能完全生效。
-*   **非官方擴充功能：**  **Twitch Frequently Used Emotes Manager** 是一個非官方的個人專案，與 Twitch 公司沒有任何關聯，也不受 Twitch 官方認可或支援。  使用本擴充功能可能存在風險，請自行評估是否使用。
+**Twitch Frequently Used Emotes Manager** 是一個非官方的個人專案，與 Twitch 公司沒有任何關聯，也不受 Twitch 官方認可或支援。使用本擴充功能可能存在風險，請自行評估是否使用。
 
 ## 授權條款
 
-[MIT License](LICENSE)  您可以自由使用、修改和散布本專案的程式碼，詳情請參閱 [LICENSE](LICENSE) 檔案。
+[MIT License](LICENSE)
 
 ## 贊助 / Donate
 
-如果您覺得 **Twitch-Frequently-Used-Emotes-Manager** 這個擴充功能對您有幫助，並且願意支持我的開發工作，非常歡迎您透過以下連結贊助我：
+如果您覺得這個擴充功能對您有幫助，並且願意支持我的開發工作，歡迎透過 [歐付寶 (oPay)](https://payment.opay.tw/Broadcaster/Donate/24F8296772A9D24F2F70E3BB22F5C3E8) 贊助。非常感謝您的支持！
 
-*   **歐付寶 (oPay)：** [贊助連結 (歐付寶)](https://payment.opay.tw/Broadcaster/Donate/24F8296772A9D24F2F70E3BB22F5C3E8) - 透過歐付寶平台贊助。
-*   **綠界科技 (ECPay)：** [贊助連結 (綠界科技)](https://p.ecpay.com.tw/E1B34) - 透過綠界科技平台贊助。
+## 意見回饋
 
-您的贊助將是對我最大的鼓勵和支持，讓我更有動力持續開發和維護這個專案，提供更好的使用者體驗。非常感謝您的支持！
-
-**歡迎使用 Twitch Frequently Used Emotes Manager！**  
-
-如果您有任何問題、建議或發現 Bug，歡迎提出 Issue 或 Pull Request 或透過 [Discord (darrylych)](https://discord.com/users/536082876836610058) 聯絡我。
+有任何問題、建議或發現 Bug，歡迎提出 [Issue](https://github.com/darrylych/Twitch-Frequently-Used-Emotes-Manager/issues)、加入 [Discord 伺服器](https://discord.gg/CawUubnPdD)，或透過 [Discord (darrylych)](https://discord.com/users/536082876836610058) 聯絡我。
