@@ -23,7 +23,7 @@
 
 以下資料使用 Chrome 擴充功能儲存空間（`chrome.storage`），只存在您的裝置上：
 
-- 偏好設定（主題、是否隱藏預設表情、預設匯入模式、排序方式）。
+- 偏好設定（語言、主題、是否隱藏預設表情、預設匯入模式、排序方式）。
 - 釘選清單與釘選前的真實使用次數。
 - 儲存槽：您手動儲存的表情清單與槽位名稱。
 - 自動備份：刪除、匯入、載入等操作前的清單副本（最多 10 份）。
@@ -71,7 +71,7 @@ Everything the extension does happens inside your browser. **The extension does 
 
 The following is kept in Chrome's extension storage (`chrome.storage`) on your device:
 
-- Preferences (theme, hide default emotes, default import mode, sort order).
+- Preferences (language, theme, hide default emotes, default import mode, sort order).
 - Your pins and each pinned emote's real use count.
 - Saved slots: emote lists you saved yourself, and the slot names.
 - Automatic backups: copies of your list taken before deletes, imports, loads and similar actions (up to 10).

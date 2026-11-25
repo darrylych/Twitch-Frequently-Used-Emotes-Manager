@@ -14,11 +14,10 @@ Take control of the "frequently used" emotes Twitch shows in your emote picker. 
 The extension works directly on the emote history Twitch keeps in your browser (`localStorage` key `twilight.emote_picker_history`). Nothing leaves your browser.
 
 <p align="center">
-  <img src="images/popup-emotes.png" width="300" alt="Emotes tab: pins, weekly trends and use counts">
-  <img src="images/popup-insights.png" width="300" alt="Insights tab: hot this week and all-time top">
-  <img src="images/popup-backup.png" width="300" alt="Backup tab: saved lists and automatic backups">
+  <img src="images/popup-emotes-en.png" width="300" alt="Emotes tab: pins, weekly trends and use counts">
+  <img src="images/popup-insights-en.png" width="300" alt="Insights tab: hot this week and all-time top">
+  <img src="images/popup-backup-en.png" width="300" alt="Backup tab: saved lists and automatic backups">
 </p>
-<p align="center"><sub>Screenshots show the Traditional Chinese interface; the extension follows your browser language.</sub></p>
 
 ## What's new in 2.1.0
 
@@ -27,6 +26,7 @@ The extension works directly on the emote history Twitch keeps in your browser (
 - **Usage trends** — "+N this week" on every emote, plus *Hot this week* and *Gathering dust* lists.
 - **Automatic backups and undo** — a backup is taken before every delete, import, load or clear (last 10 kept); restore any of them, or hit **Undo** right in the confirmation toast.
 - **Safer bulk actions** — select-all and bulk delete only touch emotes you can currently see.
+- **Language switch** — English or Traditional Chinese regardless of your browser language (header button or Settings).
 - **Saved slots keep your pins**, use counts are edited inline, and there are keyboard shortcuts.
 
 ## Install
@@ -76,6 +76,7 @@ Rows show small tags: `Pinned #n`, a green `+N this week` when the emote gained 
 
 Click the gear icon in the popup. Changes save automatically.
 
+- Language: auto (follows the browser) / English / 繁體中文. The **A / EN / 中** button in the popup header cycles through the same options.
 - Theme: auto / dark / light.
 - Hide Twitch's default emotes by default.
 - Default import mode: Replace or Merge.

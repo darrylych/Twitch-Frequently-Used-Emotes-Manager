@@ -7,9 +7,9 @@
 
 Twitch fills the "frequently used" row of its emote picker by use count. This extension lets you decide what goes there: pin favourites to the front, change or reset use counts, see which emotes you're actually using this week, clear out the ones gathering dust, and back everything up.
 
-This guide covers **version 2.1.0**. Screenshots show the Traditional Chinese interface; the extension follows your browser language.
+This guide covers **version 2.1.0**.
 
-![Emotes tab](images/popup-emotes.png)
+![Emotes tab](images/popup-emotes-en.png)
 
 ---
 
@@ -38,6 +38,8 @@ This guide covers **version 2.1.0**. Screenshots show the Traditional Chinese in
 3. Open any [Twitch](https://www.twitch.tv) page and, **with the Twitch tab active**, click the extension icon.
 
 On any other site the popup shows **"Open a Twitch tab first"** and an *Open Twitch* button.
+
+The interface follows your browser language by default. To use English or Traditional Chinese regardless, click the **A / EN / 中** button in the popup's top-right corner (see [Settings](#settings)).
 
 > An empty list means Twitch hasn't recorded any emotes for you yet. Use a few in chat, then click ⟳ in the popup's top-right corner to reload.
 
@@ -94,7 +96,7 @@ After every delete a message appears at the bottom — click **Undo** on it. If 
 
 ## 6. See what you've been using {#insights}
 
-![Insights tab](images/popup-insights.png)
+![Insights tab](images/popup-insights-en.png)
 
 The **Insights** tab shows:
 
@@ -110,7 +112,7 @@ In the Emotes tab, recently used emotes also show a green **+N this week**.
 
 ## 7. Back up, restore and switch lists {#backup}
 
-![Backup tab](images/popup-backup.png)
+![Backup tab](images/popup-backup-en.png)
 
 ### Automatic backups
 
@@ -143,6 +145,7 @@ Handy if you use different emotes for, say, chatting and watching esports.
 
 Click the ⚙ gear in the popup's top-right corner. Settings save automatically:
 
+- **Language:** auto (follows your browser), English or 繁體中文. The **A / EN / 中** button in the popup header switches it too.
 - **Theme:** auto (follows your system), dark or light. You can also switch with the moon/sun icon in the popup header.
 - **Hide Twitch's default emotes** when the popup opens.
 - **Default import mode:** Replace or Merge.
